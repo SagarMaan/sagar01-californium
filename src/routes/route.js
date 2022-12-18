@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const UserModel= require("../models/userModel.js")
-const UserController= require("../controllers/userController")
+const UserModel= require("../models/bookModel.js")
+const UserController= require("../controllers/bookController")
 
-router.post("/postman", UserController.createBook  )
+router.post("/createBook", UserController.createBook  )
 
-router.get("/getBooks", UserController.getBookData)
+router.get("/getBookData", UserController.getBookData)
 
-module.exports = router;
+router.get("/particularBook" , UserController.particularBook)
+
+module.exports = router;       
